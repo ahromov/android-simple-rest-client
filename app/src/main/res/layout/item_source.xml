@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+                name="source"
+                type="com.example.myapplication.model.Sources"/>
+    </data>
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:columnCount="2">
+
+        <!-- Текст для description, розміщений в першій колонці, перший ряд -->
+        <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{source.name}"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:padding="8dp"/>
+
+        <!-- Текст для status, розміщений в другій колонці, перший ряд -->
+        <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{source.status}"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:padding="8dp"/>
+
+        <!-- Інші тексти та віджети, які ви хочете розмістити -->
+<!--        <Button-->
+<!--                android:id="@+id/actionButton"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Action Button"-->
+<!--                android:layout_row="1"-->
+<!--                android:layout_column="0"-->
+<!--                android:layout_columnSpan="2"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:padding="12dp"/>-->
+    </GridLayout>
+</layout>
